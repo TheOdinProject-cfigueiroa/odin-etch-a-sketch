@@ -2,13 +2,6 @@
   --container: 500px;
 }
 
-* {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   gap: 30px;
@@ -32,9 +25,4 @@ div.line {
 
 div.pixel {
   flex: 1;
-}
-
-button{
-    width: var(--container);
-    border-radius: 8px;
 }
