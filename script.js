@@ -20,10 +20,18 @@ function buildCanvas(quantity = 16) {
   );
 }
 
+function validateInput() {
+  let input
+  while (input > 100 || input < 1 || !Number.isInteger(input)) {
+    input = Number(prompt("canvas size? min: 1 - max: 100", 100));
+  }
+  return input
+}
+
 btn = document.querySelector("button");
 
 btn.addEventListener("click", (e) => {
-  buildCanvas(Number(prompt("how many?")));
+  buildCanvas(validateInput());
 });
 
-buildCanvas();
+buildCanvas(16);
